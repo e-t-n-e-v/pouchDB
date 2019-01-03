@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contacts
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button color="secondary" (click)="createNew()">
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  <ion-item-sliding *ngFor="let person of persons">
+    <ion-item>
+        {{person.xname}}
+        <p>
+          Email: {{person.xemail}}
+        </p>
+        <p>
+          Phone: {{person.xphone}}
+        </p>
+    </ion-item>
+
+    <ion-item-options slide="left">
+      <button (click)="edit(person)" ion-button color="primary">
+        <ion-icon name="create"></ion-icon>
+        Edit
+      </button>
+      <button (click)="delete(person)" ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        Delete
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+</ion-content>
