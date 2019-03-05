@@ -35,7 +35,7 @@ export class HomePage {
           for (let i=0; i<rows.length; i++){
             this.persons.push(rows[i].doc);
           }
-          console.log(rows[0].doc);
+          // console.log(rows[0].doc);
         }
       });
       
